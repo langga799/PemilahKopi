@@ -1,0 +1,1 @@
+package com.example.pemilahkopi.modeldata class DataKopiResponse(	val riwayat: List<RiwayatItem>,	val totalHijau: Int,	val tanggalMonitoring: String,	val totalMerah: Int,	val totalKuning: Int,	val statusCode: Int)data class RiwayatItem(	val berat: Int,	val created: Int,	val id: Int,	val kopi: String)

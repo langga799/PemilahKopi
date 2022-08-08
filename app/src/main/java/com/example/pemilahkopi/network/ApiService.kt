@@ -1,1 +1,1 @@
-package com.example.pemilahkopi.networkinterface ApiService {}
+package com.example.pemilahkopi.networkimport com.example.pemilahkopi.model.DataKopiResponseimport retrofit2.Callimport retrofit2.http.GETinterface ApiService {    @GET("public/api/riwayat")    fun getDataKopi(): Call<DataKopiResponse>}

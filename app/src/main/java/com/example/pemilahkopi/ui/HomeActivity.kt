@@ -3,6 +3,8 @@ package com.example.pemilahkopi.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
+import com.example.pemilahkopi.R
 import com.example.pemilahkopi.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -12,6 +14,12 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.toolbar.apply {
+            title = "Beranda"
+            setTitleTextColor(ContextCompat.getColor(this@HomeActivity, R.color.white))
+        }
+
 
         navigation()
     }

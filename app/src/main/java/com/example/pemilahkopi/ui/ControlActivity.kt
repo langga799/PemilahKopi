@@ -1,8 +1,10 @@
 package com.example.pemilahkopi.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.example.pemilahkopi.R
 import com.example.pemilahkopi.databinding.ActivityControlBinding
 
 class ControlActivity : AppCompatActivity() {
@@ -14,12 +16,21 @@ class ControlActivity : AppCompatActivity() {
         binding = ActivityControlBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.apply {
-            btnBackToHome.setOnClickListener {
-                startActivity(Intent(this@ControlActivity, HomeActivity::class.java))
-                finishAffinity()
-            }
+
+        val toolbar = binding.toolbar
+        toolbar.apply {
+            title = "Halaman Kontrol"
+            setTitleTextColor(ContextCompat.getColor(baseContext, R.color.white))
+            navigationIcon =
+                ContextCompat.getDrawable(baseContext, R.drawable.ic_round_arrow_back_24)
         }
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+
+
 
     }
 }
