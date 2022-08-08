@@ -2,10 +2,16 @@ package com.example.pemilahkopi.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.pemilahkopi.R
 import com.example.pemilahkopi.databinding.ActivityInformationBinding
+import com.example.pemilahkopi.model.DataBeratResponse
+import com.example.pemilahkopi.network.RetrofitBuilder
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class InformationActivity : AppCompatActivity() {
 
@@ -31,6 +37,33 @@ class InformationActivity : AppCompatActivity() {
         }
 
 
+        RetrofitBuilder().getApiService().getDataBerat()
+            .enqueue(object : Callback<DataBeratResponse> {
+                override fun onResponse(
+                    call: Call<DataBeratResponse>,
+                    response: Response<DataBeratResponse>,
+                ) {
+                    if (response.isSuccessful) {
+                        Log.d("DATA_BERAT", response.body().toString())
+                        val data = response.body()?.kopis!!
+
+                        for (berat in data){
+
+                        }
+
+                        binding.apply {
+                            tvHijau.setText(data[2].berat.toString())
+                            tvKuning.setText(data[1].berat.toString())
+                            tvMerah.setText(data[0].berat.toString())
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<DataBeratResponse>, t: Throwable) {
+
+                }
+
+            })
 
 
         binding.apply {
@@ -38,9 +71,7 @@ class InformationActivity : AppCompatActivity() {
             tvHijau.isEnabled = false
             tvMerah.isEnabled = false
 
-            tvHijau.setText("100")
-            tvKuning.setText("100")
-            tvMerah.setText("100")
+
 
 
 

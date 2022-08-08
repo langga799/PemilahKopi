@@ -1,0 +1,1 @@
+package com.example.pemilahkopi.modelimport com.google.gson.annotations.SerializedNamedata class DataBeratResponse(	@field:SerializedName("kopis")	val kopis: List<KopisItem>,	@field:SerializedName("statusCode")	val statusCode: Int)data class KopisItem(	@field:SerializedName("berat")	val berat: Int,	@field:SerializedName("tipe")	val tipe: String)
