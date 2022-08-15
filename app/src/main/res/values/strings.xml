@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PemilahKopi</string>
+    <string name="monitoring_app">Monitoring App</string>
 </resources>

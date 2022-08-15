@@ -16,6 +16,9 @@
         android:theme="@style/Theme.PemilahKopi"
         tools:targetApi="31">
         <activity
+            android:name=".TesActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.RiwayatActivity"
             android:exported="false" />
         <activity

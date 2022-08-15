@@ -1,10 +1,12 @@
 package com.example.pemilahkopi.ui
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pemilahkopi.R
 import com.example.pemilahkopi.adapter.TableAdapter
@@ -19,6 +21,7 @@ import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 
+@RequiresApi(Build.VERSION_CODES.O)
 class RiwayatActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRiwayatBinding
@@ -44,7 +47,9 @@ class RiwayatActivity : AppCompatActivity() {
                     when (response.code()) {
                         200 -> {
                             val dataRiwayat = response.body()?.riwayat
-                            dataRiwayat?.let { adapter.addData(it) }
+                            dataRiwayat?.let { riwayatItem ->
+                                adapter.addData(riwayatItem)
+                            }
                             binding.progressLoading.visibility = View.GONE
 
                             binding.rvItemTable.adapter = adapter

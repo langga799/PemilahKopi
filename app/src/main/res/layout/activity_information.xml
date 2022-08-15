@@ -147,18 +147,32 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_to_riwayat"
-                android:layout_width="180dp"
+                android:layout_width="0dp"
                 android:layout_height="56dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="32dp"
                 android:text="Lihat Data Kopi"
                 android:textAllCaps="false"
                 app:cornerRadius="16dp"
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_reset"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reset"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="19dp"
+                android:text="Reset Data"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_to_riwayat"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
