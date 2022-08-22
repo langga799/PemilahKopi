@@ -18,6 +18,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <include
+        layout="@layout/item_information"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
@@ -146,11 +156,26 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_download_data_berat"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="32dp"
+                android:text="Download"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_reset"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"/>
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_to_riwayat"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginStart="19dp"
                 android:layout_marginEnd="32dp"
+                android:visibility="gone"
                 android:text="Lihat Data Kopi"
                 android:textAllCaps="false"
                 app:cornerRadius="16dp"
@@ -169,7 +194,7 @@
                 android:textAllCaps="false"
                 app:cornerRadius="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_to_riwayat"
+                app:layout_constraintEnd_toStartOf="@+id/btn_download_data_berat"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
@@ -218,6 +243,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
 
 
 

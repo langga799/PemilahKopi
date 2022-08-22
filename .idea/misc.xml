@@ -11,10 +11,12 @@
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/drawable/ic_round_navigate_next_24.xml" value="0.1415" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_control.xml" value="0.2" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_information.xml" value="0.5" />
+        <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_information.xml" value="0.15486111111111112" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_riwayat.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/activity_tes.xml" value="0.264" />
+        <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/information_pdf.xml" value="0.23125" />
+        <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/item_information.xml" value="0.264" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/item_table.xml" value="0.264" />
         <entry key="..\:/Users/langg/AndroidStudioProjects/PemilahKopi/app/src/main/res/layout/pdf_layout.xml" value="0.264" />
       </map>
